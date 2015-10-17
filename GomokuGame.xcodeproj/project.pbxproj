@@ -1,0 +1,521 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BCBF30AD1BD2717A00C566E3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BCBF30AC1BD2717A00C566E3 /* main.m */; };
+		BCBF30B01BD2717A00C566E3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BCBF30AF1BD2717A00C566E3 /* AppDelegate.m */; };
+		BCBF30B31BD2717A00C566E3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCBF30B21BD2717A00C566E3 /* ViewController.m */; };
+		BCBF30B61BD2717A00C566E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCBF30B41BD2717A00C566E3 /* Main.storyboard */; };
+		BCBF30B81BD2717A00C566E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCBF30B71BD2717A00C566E3 /* Assets.xcassets */; };
+		BCBF30BB1BD2717A00C566E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCBF30B91BD2717A00C566E3 /* LaunchScreen.storyboard */; };
+		BCBF30C61BD2717A00C566E3 /* GomokuGameTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BCBF30C51BD2717A00C566E3 /* GomokuGameTests.m */; };
+		BCBF30D11BD2717A00C566E3 /* GomokuGameUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = BCBF30D01BD2717A00C566E3 /* GomokuGameUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BCBF30C21BD2717A00C566E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BCBF30A01BD2717A00C566E3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BCBF30A71BD2717A00C566E3;
+			remoteInfo = GomokuGame;
+		};
+		BCBF30CD1BD2717A00C566E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BCBF30A01BD2717A00C566E3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BCBF30A71BD2717A00C566E3;
+			remoteInfo = GomokuGame;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BCBF30A81BD2717A00C566E3 /* GomokuGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GomokuGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BCBF30AC1BD2717A00C566E3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BCBF30AE1BD2717A00C566E3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		BCBF30AF1BD2717A00C566E3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		BCBF30B11BD2717A00C566E3 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		BCBF30B21BD2717A00C566E3 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		BCBF30B51BD2717A00C566E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BCBF30B71BD2717A00C566E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BCBF30BA1BD2717A00C566E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BCBF30BC1BD2717A00C566E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BCBF30C11BD2717A00C566E3 /* GomokuGameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GomokuGameTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BCBF30C51BD2717A00C566E3 /* GomokuGameTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GomokuGameTests.m; sourceTree = "<group>"; };
+		BCBF30C71BD2717A00C566E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BCBF30CC1BD2717A00C566E3 /* GomokuGameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GomokuGameUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BCBF30D01BD2717A00C566E3 /* GomokuGameUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GomokuGameUITests.m; sourceTree = "<group>"; };
+		BCBF30D21BD2717A00C566E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BCBF30A51BD2717A00C566E3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BCBF30BE1BD2717A00C566E3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BCBF30C91BD2717A00C566E3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BCBF309F1BD2717A00C566E3 = {
+			isa = PBXGroup;
+			children = (
+				BCBF30AA1BD2717A00C566E3 /* GomokuGame */,
+				BCBF30C41BD2717A00C566E3 /* GomokuGameTests */,
+				BCBF30CF1BD2717A00C566E3 /* GomokuGameUITests */,
+				BCBF30A91BD2717A00C566E3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BCBF30A91BD2717A00C566E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BCBF30A81BD2717A00C566E3 /* GomokuGame.app */,
+				BCBF30C11BD2717A00C566E3 /* GomokuGameTests.xctest */,
+				BCBF30CC1BD2717A00C566E3 /* GomokuGameUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BCBF30AA1BD2717A00C566E3 /* GomokuGame */ = {
+			isa = PBXGroup;
+			children = (
+				BCBF30AE1BD2717A00C566E3 /* AppDelegate.h */,
+				BCBF30AF1BD2717A00C566E3 /* AppDelegate.m */,
+				BCBF30B11BD2717A00C566E3 /* ViewController.h */,
+				BCBF30B21BD2717A00C566E3 /* ViewController.m */,
+				BCBF30B41BD2717A00C566E3 /* Main.storyboard */,
+				BCBF30B71BD2717A00C566E3 /* Assets.xcassets */,
+				BCBF30B91BD2717A00C566E3 /* LaunchScreen.storyboard */,
+				BCBF30BC1BD2717A00C566E3 /* Info.plist */,
+				BCBF30AB1BD2717A00C566E3 /* Supporting Files */,
+			);
+			path = GomokuGame;
+			sourceTree = "<group>";
+		};
+		BCBF30AB1BD2717A00C566E3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BCBF30AC1BD2717A00C566E3 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BCBF30C41BD2717A00C566E3 /* GomokuGameTests */ = {
+			isa = PBXGroup;
+			children = (
+				BCBF30C51BD2717A00C566E3 /* GomokuGameTests.m */,
+				BCBF30C71BD2717A00C566E3 /* Info.plist */,
+			);
+			path = GomokuGameTests;
+			sourceTree = "<group>";
+		};
+		BCBF30CF1BD2717A00C566E3 /* GomokuGameUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BCBF30D01BD2717A00C566E3 /* GomokuGameUITests.m */,
+				BCBF30D21BD2717A00C566E3 /* Info.plist */,
+			);
+			path = GomokuGameUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BCBF30A71BD2717A00C566E3 /* GomokuGame */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BCBF30D51BD2717A00C566E3 /* Build configuration list for PBXNativeTarget "GomokuGame" */;
+			buildPhases = (
+				BCBF30A41BD2717A00C566E3 /* Sources */,
+				BCBF30A51BD2717A00C566E3 /* Frameworks */,
+				BCBF30A61BD2717A00C566E3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GomokuGame;
+			productName = GomokuGame;
+			productReference = BCBF30A81BD2717A00C566E3 /* GomokuGame.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BCBF30C01BD2717A00C566E3 /* GomokuGameTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BCBF30D81BD2717A00C566E3 /* Build configuration list for PBXNativeTarget "GomokuGameTests" */;
+			buildPhases = (
+				BCBF30BD1BD2717A00C566E3 /* Sources */,
+				BCBF30BE1BD2717A00C566E3 /* Frameworks */,
+				BCBF30BF1BD2717A00C566E3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BCBF30C31BD2717A00C566E3 /* PBXTargetDependency */,
+			);
+			name = GomokuGameTests;
+			productName = GomokuGameTests;
+			productReference = BCBF30C11BD2717A00C566E3 /* GomokuGameTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BCBF30CB1BD2717A00C566E3 /* GomokuGameUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BCBF30DB1BD2717A00C566E3 /* Build configuration list for PBXNativeTarget "GomokuGameUITests" */;
+			buildPhases = (
+				BCBF30C81BD2717A00C566E3 /* Sources */,
+				BCBF30C91BD2717A00C566E3 /* Frameworks */,
+				BCBF30CA1BD2717A00C566E3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BCBF30CE1BD2717A00C566E3 /* PBXTargetDependency */,
+			);
+			name = GomokuGameUITests;
+			productName = GomokuGameUITests;
+			productReference = BCBF30CC1BD2717A00C566E3 /* GomokuGameUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BCBF30A01BD2717A00C566E3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = "Alex Zagrebin";
+				TargetAttributes = {
+					BCBF30A71BD2717A00C566E3 = {
+						CreatedOnToolsVersion = 7.1;
+					};
+					BCBF30C01BD2717A00C566E3 = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = BCBF30A71BD2717A00C566E3;
+					};
+					BCBF30CB1BD2717A00C566E3 = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = BCBF30A71BD2717A00C566E3;
+					};
+				};
+			};
+			buildConfigurationList = BCBF30A31BD2717A00C566E3 /* Build configuration list for PBXProject "GomokuGame" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BCBF309F1BD2717A00C566E3;
+			productRefGroup = BCBF30A91BD2717A00C566E3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BCBF30A71BD2717A00C566E3 /* GomokuGame */,
+				BCBF30C01BD2717A00C566E3 /* GomokuGameTests */,
+				BCBF30CB1BD2717A00C566E3 /* GomokuGameUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BCBF30A61BD2717A00C566E3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BCBF30BB1BD2717A00C566E3 /* LaunchScreen.storyboard in Resources */,
+				BCBF30B81BD2717A00C566E3 /* Assets.xcassets in Resources */,
+				BCBF30B61BD2717A00C566E3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BCBF30BF1BD2717A00C566E3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BCBF30CA1BD2717A00C566E3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BCBF30A41BD2717A00C566E3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BCBF30B31BD2717A00C566E3 /* ViewController.m in Sources */,
+				BCBF30B01BD2717A00C566E3 /* AppDelegate.m in Sources */,
+				BCBF30AD1BD2717A00C566E3 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BCBF30BD1BD2717A00C566E3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BCBF30C61BD2717A00C566E3 /* GomokuGameTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BCBF30C81BD2717A00C566E3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BCBF30D11BD2717A00C566E3 /* GomokuGameUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BCBF30C31BD2717A00C566E3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BCBF30A71BD2717A00C566E3 /* GomokuGame */;
+			targetProxy = BCBF30C21BD2717A00C566E3 /* PBXContainerItemProxy */;
+		};
+		BCBF30CE1BD2717A00C566E3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BCBF30A71BD2717A00C566E3 /* GomokuGame */;
+			targetProxy = BCBF30CD1BD2717A00C566E3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BCBF30B41BD2717A00C566E3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BCBF30B51BD2717A00C566E3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BCBF30B91BD2717A00C566E3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BCBF30BA1BD2717A00C566E3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BCBF30D31BD2717A00C566E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BCBF30D41BD2717A00C566E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BCBF30D61BD2717A00C566E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = GomokuGame/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = developer.AlZag.GomokuGame;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		BCBF30D71BD2717A00C566E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = GomokuGame/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = developer.AlZag.GomokuGame;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		BCBF30D91BD2717A00C566E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = GomokuGameTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = developer.AlZag.GomokuGameTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GomokuGame.app/GomokuGame";
+			};
+			name = Debug;
+		};
+		BCBF30DA1BD2717A00C566E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = GomokuGameTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = developer.AlZag.GomokuGameTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GomokuGame.app/GomokuGame";
+			};
+			name = Release;
+		};
+		BCBF30DC1BD2717A00C566E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = GomokuGameUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = developer.AlZag.GomokuGameUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = GomokuGame;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		BCBF30DD1BD2717A00C566E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = GomokuGameUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = developer.AlZag.GomokuGameUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = GomokuGame;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BCBF30A31BD2717A00C566E3 /* Build configuration list for PBXProject "GomokuGame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BCBF30D31BD2717A00C566E3 /* Debug */,
+				BCBF30D41BD2717A00C566E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BCBF30D51BD2717A00C566E3 /* Build configuration list for PBXNativeTarget "GomokuGame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BCBF30D61BD2717A00C566E3 /* Debug */,
+				BCBF30D71BD2717A00C566E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		BCBF30D81BD2717A00C566E3 /* Build configuration list for PBXNativeTarget "GomokuGameTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BCBF30D91BD2717A00C566E3 /* Debug */,
+				BCBF30DA1BD2717A00C566E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		BCBF30DB1BD2717A00C566E3 /* Build configuration list for PBXNativeTarget "GomokuGameUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BCBF30DC1BD2717A00C566E3 /* Debug */,
+				BCBF30DD1BD2717A00C566E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BCBF30A01BD2717A00C566E3 /* Project object */;
+}
