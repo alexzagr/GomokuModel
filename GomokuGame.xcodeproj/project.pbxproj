@@ -7,8 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BCB1582D1BD6B7C800F2E386 /* Dimension.m in Sources */ = {isa = PBXBuildFile; fileRef = BCB1582C1BD6B7C800F2E386 /* Dimension.m */; };
-		BCB158301BD6D05000F2E386 /* ConcreteCoordinate.m in Sources */ = {isa = PBXBuildFile; fileRef = BCB1582F1BD6D05000F2E386 /* ConcreteCoordinate.m */; };
+		BC4692751BD801A000D78D2D /* Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC4692681BD801A000D78D2D /* Cell.m */; };
+		BC4692761BD801A000D78D2D /* ConcreteCoordinate.m in Sources */ = {isa = PBXBuildFile; fileRef = BC46926A1BD801A000D78D2D /* ConcreteCoordinate.m */; };
+		BC4692771BD801A000D78D2D /* Coordinate.m in Sources */ = {isa = PBXBuildFile; fileRef = BC46926C1BD801A000D78D2D /* Coordinate.m */; };
+		BC4692781BD801A000D78D2D /* Dimension.m in Sources */ = {isa = PBXBuildFile; fileRef = BC46926E1BD801A000D78D2D /* Dimension.m */; };
+		BC4692791BD801A000D78D2D /* GomokuGameModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BC4692701BD801A000D78D2D /* GomokuGameModel.m */; };
+		BC46927A1BD801A000D78D2D /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = BC4692721BD801A000D78D2D /* Player.m */; };
+		BC46927B1BD801A000D78D2D /* Puzzle.m in Sources */ = {isa = PBXBuildFile; fileRef = BC4692741BD801A000D78D2D /* Puzzle.m */; };
 		BCBF30AD1BD2717A00C566E3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BCBF30AC1BD2717A00C566E3 /* main.m */; };
 		BCBF30B01BD2717A00C566E3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BCBF30AF1BD2717A00C566E3 /* AppDelegate.m */; };
 		BCBF30B31BD2717A00C566E3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCBF30B21BD2717A00C566E3 /* ViewController.m */; };
@@ -17,11 +22,6 @@
 		BCBF30BB1BD2717A00C566E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCBF30B91BD2717A00C566E3 /* LaunchScreen.storyboard */; };
 		BCBF30C61BD2717A00C566E3 /* GomokuGameTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BCBF30C51BD2717A00C566E3 /* GomokuGameTests.m */; };
 		BCBF30D11BD2717A00C566E3 /* GomokuGameUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = BCBF30D01BD2717A00C566E3 /* GomokuGameUITests.m */; };
-		BCBF30E01BD271D800C566E3 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = BCBF30DF1BD271D800C566E3 /* Player.m */; };
-		BCBF30E61BD273D200C566E3 /* Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = BCBF30E51BD273D200C566E3 /* Cell.m */; };
-		BCBF30EF1BD275DC00C566E3 /* GomokuGameModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BCBF30EE1BD275DC00C566E3 /* GomokuGameModel.m */; };
-		BCBF30F21BD2768B00C566E3 /* Coordinate.m in Sources */ = {isa = PBXBuildFile; fileRef = BCBF30F11BD2768B00C566E3 /* Coordinate.m */; };
-		BCE0E6731BD4E6A100C4ED90 /* Puzzle.m in Sources */ = {isa = PBXBuildFile; fileRef = BCE0E6721BD4E6A100C4ED90 /* Puzzle.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,10 +42,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		BCB1582B1BD6B7C800F2E386 /* Dimension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Dimension.h; sourceTree = "<group>"; };
-		BCB1582C1BD6B7C800F2E386 /* Dimension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Dimension.m; sourceTree = "<group>"; };
-		BCB1582E1BD6D05000F2E386 /* ConcreteCoordinate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConcreteCoordinate.h; sourceTree = "<group>"; };
-		BCB1582F1BD6D05000F2E386 /* ConcreteCoordinate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConcreteCoordinate.m; sourceTree = "<group>"; };
+		BC4692671BD801A000D78D2D /* Cell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cell.h; sourceTree = "<group>"; };
+		BC4692681BD801A000D78D2D /* Cell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cell.m; sourceTree = "<group>"; };
+		BC4692691BD801A000D78D2D /* ConcreteCoordinate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConcreteCoordinate.h; sourceTree = "<group>"; };
+		BC46926A1BD801A000D78D2D /* ConcreteCoordinate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConcreteCoordinate.m; sourceTree = "<group>"; };
+		BC46926B1BD801A000D78D2D /* Coordinate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Coordinate.h; sourceTree = "<group>"; };
+		BC46926C1BD801A000D78D2D /* Coordinate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Coordinate.m; sourceTree = "<group>"; };
+		BC46926D1BD801A000D78D2D /* Dimension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Dimension.h; sourceTree = "<group>"; };
+		BC46926E1BD801A000D78D2D /* Dimension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Dimension.m; sourceTree = "<group>"; };
+		BC46926F1BD801A000D78D2D /* GomokuGameModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GomokuGameModel.h; sourceTree = "<group>"; };
+		BC4692701BD801A000D78D2D /* GomokuGameModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GomokuGameModel.m; sourceTree = "<group>"; };
+		BC4692711BD801A000D78D2D /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
+		BC4692721BD801A000D78D2D /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
+		BC4692731BD801A000D78D2D /* Puzzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Puzzle.h; sourceTree = "<group>"; };
+		BC4692741BD801A000D78D2D /* Puzzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Puzzle.m; sourceTree = "<group>"; };
 		BCBF30A81BD2717A00C566E3 /* GomokuGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GomokuGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCBF30AC1BD2717A00C566E3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BCBF30AE1BD2717A00C566E3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -62,16 +72,6 @@
 		BCBF30CC1BD2717A00C566E3 /* GomokuGameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GomokuGameUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCBF30D01BD2717A00C566E3 /* GomokuGameUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GomokuGameUITests.m; sourceTree = "<group>"; };
 		BCBF30D21BD2717A00C566E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BCBF30DE1BD271D800C566E3 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
-		BCBF30DF1BD271D800C566E3 /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
-		BCBF30E41BD273D200C566E3 /* Cell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cell.h; sourceTree = "<group>"; };
-		BCBF30E51BD273D200C566E3 /* Cell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cell.m; sourceTree = "<group>"; };
-		BCBF30ED1BD275DC00C566E3 /* GomokuGameModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GomokuGameModel.h; sourceTree = "<group>"; };
-		BCBF30EE1BD275DC00C566E3 /* GomokuGameModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GomokuGameModel.m; sourceTree = "<group>"; };
-		BCBF30F01BD2768B00C566E3 /* Coordinate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Coordinate.h; sourceTree = "<group>"; };
-		BCBF30F11BD2768B00C566E3 /* Coordinate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Coordinate.m; sourceTree = "<group>"; };
-		BCE0E6711BD4E6A100C4ED90 /* Puzzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Puzzle.h; sourceTree = "<group>"; };
-		BCE0E6721BD4E6A100C4ED90 /* Puzzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Puzzle.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,10 +99,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BC4692661BD801A000D78D2D /* GomokuClasses */ = {
+			isa = PBXGroup;
+			children = (
+				BC4692671BD801A000D78D2D /* Cell.h */,
+				BC4692681BD801A000D78D2D /* Cell.m */,
+				BC4692691BD801A000D78D2D /* ConcreteCoordinate.h */,
+				BC46926A1BD801A000D78D2D /* ConcreteCoordinate.m */,
+				BC46926B1BD801A000D78D2D /* Coordinate.h */,
+				BC46926C1BD801A000D78D2D /* Coordinate.m */,
+				BC46926D1BD801A000D78D2D /* Dimension.h */,
+				BC46926E1BD801A000D78D2D /* Dimension.m */,
+				BC46926F1BD801A000D78D2D /* GomokuGameModel.h */,
+				BC4692701BD801A000D78D2D /* GomokuGameModel.m */,
+				BC4692711BD801A000D78D2D /* Player.h */,
+				BC4692721BD801A000D78D2D /* Player.m */,
+				BC4692731BD801A000D78D2D /* Puzzle.h */,
+				BC4692741BD801A000D78D2D /* Puzzle.m */,
+			);
+			path = GomokuClasses;
+			sourceTree = "<group>";
+		};
 		BCBF309F1BD2717A00C566E3 = {
 			isa = PBXGroup;
 			children = (
-				BCBF30F31BD281E800C566E3 /* Model */,
+				BC4692661BD801A000D78D2D /* GomokuClasses */,
 				BCBF30AA1BD2717A00C566E3 /* GomokuGame */,
 				BCBF30C41BD2717A00C566E3 /* GomokuGameTests */,
 				BCBF30CF1BD2717A00C566E3 /* GomokuGameUITests */,
@@ -160,27 +181,6 @@
 				BCBF30D21BD2717A00C566E3 /* Info.plist */,
 			);
 			path = GomokuGameUITests;
-			sourceTree = "<group>";
-		};
-		BCBF30F31BD281E800C566E3 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				BCBF30DE1BD271D800C566E3 /* Player.h */,
-				BCBF30DF1BD271D800C566E3 /* Player.m */,
-				BCBF30E41BD273D200C566E3 /* Cell.h */,
-				BCBF30E51BD273D200C566E3 /* Cell.m */,
-				BCE0E6711BD4E6A100C4ED90 /* Puzzle.h */,
-				BCE0E6721BD4E6A100C4ED90 /* Puzzle.m */,
-				BCBF30ED1BD275DC00C566E3 /* GomokuGameModel.h */,
-				BCBF30EE1BD275DC00C566E3 /* GomokuGameModel.m */,
-				BCB1582B1BD6B7C800F2E386 /* Dimension.h */,
-				BCB1582C1BD6B7C800F2E386 /* Dimension.m */,
-				BCB1582E1BD6D05000F2E386 /* ConcreteCoordinate.h */,
-				BCB1582F1BD6D05000F2E386 /* ConcreteCoordinate.m */,
-				BCBF30F01BD2768B00C566E3 /* Coordinate.h */,
-				BCBF30F11BD2768B00C566E3 /* Coordinate.m */,
-			);
-			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -313,16 +313,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BCBF30E01BD271D800C566E3 /* Player.m in Sources */,
 				BCBF30B31BD2717A00C566E3 /* ViewController.m in Sources */,
-				BCB158301BD6D05000F2E386 /* ConcreteCoordinate.m in Sources */,
-				BCE0E6731BD4E6A100C4ED90 /* Puzzle.m in Sources */,
-				BCB1582D1BD6B7C800F2E386 /* Dimension.m in Sources */,
-				BCBF30F21BD2768B00C566E3 /* Coordinate.m in Sources */,
+				BC4692791BD801A000D78D2D /* GomokuGameModel.m in Sources */,
+				BC4692781BD801A000D78D2D /* Dimension.m in Sources */,
+				BC4692771BD801A000D78D2D /* Coordinate.m in Sources */,
+				BC4692751BD801A000D78D2D /* Cell.m in Sources */,
+				BC4692761BD801A000D78D2D /* ConcreteCoordinate.m in Sources */,
 				BCBF30B01BD2717A00C566E3 /* AppDelegate.m in Sources */,
+				BC46927B1BD801A000D78D2D /* Puzzle.m in Sources */,
+				BC46927A1BD801A000D78D2D /* Player.m in Sources */,
 				BCBF30AD1BD2717A00C566E3 /* main.m in Sources */,
-				BCBF30E61BD273D200C566E3 /* Cell.m in Sources */,
-				BCBF30EF1BD275DC00C566E3 /* GomokuGameModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
