@@ -86,6 +86,8 @@
 
 - (NSArray*) isBingo: (Coordinate*) coordinate andPlayer:(Player *)player {
     
+    NSArray *arrays = @[horizontalLine, verticalLine, leftDiagonalLine, rightDiagonalLine];
+    
     for (NSUInteger horizontalCounter = 1; horizontalCounter < self.dimension.width + 1; horizontalCounter++) {
         [horizontalLine addObject:[self giveCellWith:[Coordinate createWithX:horizontalCounter andY:coordinate.y]]];
     }
@@ -121,73 +123,30 @@
         }
     }
     
-    __block NSInteger tempCounter = 0;
-    [horizontalLine enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        Cell *cell = obj;
-        if (cell.marked && [cell.owner isEqual:player]) {
-            tempCounter++;
-            
-        } else {
-            if (tempCounter >= 5) {
-                for (NSInteger forCounter = idx - tempCounter; forCounter < idx; forCounter++) {
-                    [winCombination addObject:[horizontalLine objectAtIndex:forCounter]];
+    
+    for (NSInteger count = 0; count < [arrays count]; count++) {
+        __block NSInteger tempCounter = 0;
+        NSMutableArray *array = [arrays objectAtIndex:count];
+        
+        [array enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            Cell *cell = obj;
+            if (cell.marked && [cell.owner isEqual:player]) {
+                tempCounter++;
+                
+            } else {
+                if (tempCounter >= 5) {
+                    for (NSInteger forCounter = idx - tempCounter; forCounter < idx; forCounter++) {
+                        [winCombination addObject:[array objectAtIndex:forCounter]];
+                    }
                 }
+                
+                tempCounter = 0;
             }
-            
-            tempCounter = 0;
-        }
-    }];
-    
-    tempCounter = 0;
-    
-    [verticalLine enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        Cell *cell = obj;
-        if (cell.marked && [cell.owner isEqual:player]) {
-            tempCounter++;
-            
-        } else {
-            if (tempCounter >= 5) {
-                for (NSInteger forCounter = idx - tempCounter; forCounter < idx; forCounter++) {
-                    [winCombination addObject:[verticalLine objectAtIndex:forCounter]];
-                }
-            }
-            
-            tempCounter = 0;
-        }
-    }];
-    
-    [leftDiagonalLine enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        Cell *cell = obj;
-        if (cell.marked && [cell.owner isEqual:player]) {
-            tempCounter++;
-            
-        } else {
-            if (tempCounter >= 5) {
-                for (NSInteger forCounter = idx - tempCounter; forCounter < idx; forCounter++) {
-                    [winCombination addObject:[leftDiagonalLine objectAtIndex:forCounter]];
-                }
-            }
-            
-            tempCounter = 0;
-        }
-    }];
-    
-    [rightDiagonalLine enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        Cell *cell = obj;
-        if (cell.marked && [cell.owner isEqual:player]) {
-            tempCounter++;
-            
-        } else {
-            if (tempCounter >= 5) {
-                for (NSInteger forCounter = idx - tempCounter; forCounter < idx; forCounter++) {
-                    [winCombination addObject:[rightDiagonalLine objectAtIndex:forCounter]];
-                }
-            }
-            
-            tempCounter = 0;
-        }
-    }];
-    
+        }];
+        
+        [array removeAllObjects];
+        tempCounter = 0;
+    }
     
     return ([winCombination count] > 0) ? winCombination : nil;
 }

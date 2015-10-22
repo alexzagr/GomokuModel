@@ -66,15 +66,13 @@
     if (summ <= coordinate.dimension.width) {
         min = coordinate.y - 1;
         
-        coordinate -> _x += min;
-        coordinate -> _y -= min;
-        
     } else if (summ > coordinate.dimension.width) {
         min = coordinate.dimension.width - coordinate.x;
         
-        coordinate -> _x += min;
-        coordinate -> _y -= min;
     }
+    
+    coordinate -> _x += min;
+    coordinate -> _y -= min;
     
     return coordinate;
 }
@@ -91,15 +89,12 @@
     if (summ <= coordinate.dimension.height) {
         min = coordinate.x - 1;
         
-        coordinate -> _x -= min;
-        coordinate -> _y += min;
-        
     } else if (summ > coordinate.dimension.height) {
         min = coordinate.dimension.height - coordinate.y;
-        
-        coordinate -> _x -= min;
-        coordinate -> _y += min;
     }
+    
+    coordinate -> _x -= min;
+    coordinate -> _y += min;
     
     return coordinate;
 }
@@ -113,21 +108,15 @@
     if (coordinate.y > coordinate.x) {
         min = coordinate.dimension.height - coordinate.y;
         
-        coordinate -> _x += min;
-        coordinate -> _y +=min;
-        
     } else if (coordinate.x > coordinate.y) {
         min = coordinate.dimension.width - coordinate.x;
         
-        coordinate -> _x += min;
-        coordinate -> _y +=min;
-        
     } else if (coordinate.x == coordinate.y) {
         min = MIN(coordinate.dimension.width, coordinate.dimension.height) - coordinate.x;
-        
-        coordinate -> _x += min;
-        coordinate -> _y += min;
     }
+    
+    coordinate -> _x += min;
+    coordinate -> _y +=min;
     
     return coordinate;
 }
