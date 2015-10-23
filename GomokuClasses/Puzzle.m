@@ -46,18 +46,20 @@
     Puzzle *puzzle = [[Puzzle alloc] init];     // Создаем абстрактный объект (Puzzle) содержащий в себе ячейки (Cell)
     Dimension *dimension = [Dimension createWithWidth:rowCount andHeight:columnCount]; // Устанавлием границы объекта Puzzle
     
-    NSMutableArray *tempArray = [NSMutableArray new];
+    NSMutableArray *tempArray = [NSMutableArray arrayWithCapacity:columnCount + 1];
     
     for (NSInteger countY = 1; countY < columnCount + 1; countY++) {
+        NSMutableArray *innerArray = [NSMutableArray arrayWithCapacity:rowCount+1];
         
         for (NSInteger countX = 1; countX < rowCount + 1; countX++) {
+            
             Coordinate *coordinate = [Coordinate createWithX:countX andY:countY];
             Cell *cell = [Cell createWithCoordinate:coordinate]; // Создаем объекты Cell и даем им свойство Coordinate, однозначно определяющее их относительно объекта Puzzle
             
-            ConcreteCoordinate *CCoordinate = [puzzle convertToCCordinate: coordinate withDimension:dimension];
-            [tempArray insertObject:cell atIndex:[ConcreteCoordinate convertToIndex:CCoordinate
-                                                                      withDimension:dimension]]; //Переводим двумерные координаты (Coordinate) в одномерные и таким образом помещаем Cells в векторный (одномерный) массив.
+            [innerArray insertObject:cell atIndex:countX];
+            
         }
+        [tempArray insertObject:innerArray atIndex:countY];
         
     }
     
@@ -77,8 +79,7 @@
 
 - (Cell*) giveCellWith:(Coordinate *)coordinate {
     
-    return [self.cells objectAtIndex:[ConcreteCoordinate convertToIndex:[self convertToCCordinate:coordinate
-                                                                                    withDimension:_dimension]]];
+    return [[self.cells objectAtIndex:coordinate.y] objectAtIndex:coordinate.x];
 }
 
 - (void) markCellWithCoordinate:(Coordinate *)coordinate andPlayer:(Player *)player {
@@ -135,10 +136,12 @@
         
         [array enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
             Cell *cell = obj;
+            
             if (cell.marked && [cell.owner isEqual:player]) {
                 tempCounter++;
                 
             } else {
+                
                 if (tempCounter >= 5) {
                     for (NSInteger forCounter = idx - tempCounter; forCounter < idx; forCounter++) {
                         [winCombination addObject:[array objectAtIndex:forCounter]];
