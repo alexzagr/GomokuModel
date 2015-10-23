@@ -20,7 +20,6 @@
 @interface GomokuGameModel : NSObject
 
 @property (strong, readonly) Puzzle  * _Nullable puzzle;
-
 @property (nonatomic, assign) id <GomokuGameModelProtocol> _Nullable delegate;
 
 

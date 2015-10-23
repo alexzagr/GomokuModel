@@ -43,8 +43,8 @@
 }
 
 + (Puzzle*) createPuzzleWithRow:(NSUInteger)rowCount andColumn:(NSUInteger)columnCount {
-    Puzzle *puzzle = [[Puzzle alloc] init];
-    Dimension *dimension = [Dimension createWithWidth:rowCount andHeight:columnCount];
+    Puzzle *puzzle = [[Puzzle alloc] init];     // Создаем абстрактный объект (Puzzle) содержащий в себе ячейки (Cell)
+    Dimension *dimension = [Dimension createWithWidth:rowCount andHeight:columnCount]; // Устанавлием границы объекта Puzzle
     
     NSMutableArray *tempArray = [NSMutableArray new];
     
@@ -52,11 +52,11 @@
         
         for (NSInteger countX = 1; countX < rowCount + 1; countX++) {
             Coordinate *coordinate = [Coordinate createWithX:countX andY:countY];
-            Cell *cell = [Cell createWithCoordinate:coordinate];
+            Cell *cell = [Cell createWithCoordinate:coordinate]; // Создаем объекты Cell и даем им свойство Coordinate, однозначно определяющее их относительно объекта Puzzle
             
             ConcreteCoordinate *CCoordinate = [puzzle convertToCCordinate: coordinate withDimension:dimension];
             [tempArray insertObject:cell atIndex:[ConcreteCoordinate convertToIndex:CCoordinate
-                                                                      withDimension:dimension]];
+                                                                      withDimension:dimension]]; //Переводим двумерные координаты в одномерные и таким образом помещаем Cells в векторный (одномерный) массив. Такой способ доступа к ячейкам (Cell) увеличивает скорость обработки информации в несколько раз.
         }
         
     }
@@ -88,6 +88,8 @@
 }
 
 - (NSArray*) isBingo: (Coordinate*) coordinate andPlayer:(Player *)player {
+    
+    // Здесь реализация алгоритма по нахождению выигрышной комбинации ячеек (Cell)
     
     NSArray *arrays = @[horizontalLine, verticalLine, leftDiagonalLine, rightDiagonalLine];
     
