@@ -56,7 +56,7 @@
             
             ConcreteCoordinate *CCoordinate = [puzzle convertToCCordinate: coordinate withDimension:dimension];
             [tempArray insertObject:cell atIndex:[ConcreteCoordinate convertToIndex:CCoordinate
-                                                                      withDimension:dimension]]; //Переводим двумерные координаты в одномерные и таким образом помещаем Cells в векторный (одномерный) массив. Такой способ доступа к ячейкам (Cell) увеличивает скорость обработки информации в несколько раз.
+                                                                      withDimension:dimension]]; //Переводим двумерные координаты (Coordinate) в одномерные и таким образом помещаем Cells в векторный (одномерный) массив. Такой способ доступа к ячейкам (Cell) увеличивает скорость обработки информации в несколько раз.
         }
         
     }
