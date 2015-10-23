@@ -19,12 +19,12 @@
 
 @interface GomokuGameModel : NSObject
 
-@property (strong, readonly) Puzzle  * _Nonnull puzzle;
+@property (strong, readonly) Puzzle  * _Nullable puzzle;
 
 @property (nonatomic, assign) id <GomokuGameModelProtocol> _Nullable delegate;
 
 
-+ (GomokuGameModel* _Nullable) shared;
++ (GomokuGameModel* _Nonnull) shared;
 
 - (void) newGameWithSizeWidth: (NSInteger) width andHeight: (NSInteger) height;
 - (void) turn: (Player* _Nonnull) player withCoordinate: (Coordinate* _Nonnull) coordinate;

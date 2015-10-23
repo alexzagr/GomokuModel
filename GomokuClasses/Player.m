@@ -8,12 +8,19 @@
 
 #import "Player.h"
 
+@interface Player ()
+
+@property (strong, nonatomic, readwrite) NSString *playerName;
+
+@end
+
 @implementation Player
+@synthesize playerName;
 
 + (Player*) createWithPlayerName:(NSString *)name {
     Player *player = [[Player alloc] init];
     
-    player -> _playerName = name;
+    player.playerName = name;
     
     return player;
 }

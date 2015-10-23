@@ -20,10 +20,13 @@
 @property (nonatomic, strong) NSMutableArray *leftDiagonalLine;
 @property (nonatomic, strong) NSMutableArray *rightDiagonalLine;
 
+@property (strong, readwrite) Dimension *dimension;
+@property (strong, readwrite) NSArray *cells;
+
 @end
 
 @implementation Puzzle
-@synthesize winCombination, horizontalLine, verticalLine, leftDiagonalLine, rightDiagonalLine;
+@synthesize winCombination, horizontalLine, verticalLine, leftDiagonalLine, rightDiagonalLine, dimension, cells;
 
 - (id) init {
     self = [super init];
@@ -58,15 +61,15 @@
         
     }
     
-    puzzle -> _cells = [NSArray arrayWithArray:tempArray];
-    puzzle -> _dimension = dimension;
+    puzzle.cells = [NSArray arrayWithArray:tempArray];
+    puzzle.dimension = dimension;
     
     return puzzle;
 }
 
-- (ConcreteCoordinate*) convertToCCordinate: (Coordinate*) coordinate withDimension: (Dimension*) dimension {
-    NSAssert((coordinate.x <= dimension.width) &&
-             (coordinate.y <= dimension.height) &&
+- (ConcreteCoordinate*) convertToCCordinate: (Coordinate*) coordinate withDimension: (Dimension*) p_dimension {
+    NSAssert((coordinate.x <= p_dimension.width) &&
+             (coordinate.y <= p_dimension.height) &&
              ((coordinate.x > 0) && (coordinate.y > 0)), @"invalid coordinate");
     
     return [ConcreteCoordinate createWithCoordinate:coordinate andDimension:dimension];

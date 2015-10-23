@@ -8,13 +8,21 @@
 
 #import "Coordinate.h"
 
+@interface Coordinate ()
+
+@property (nonatomic, assign, readwrite) NSUInteger x;
+@property (nonatomic, assign, readwrite) NSUInteger y;
+
+@end
+
 @implementation Coordinate
+@synthesize x,y;
 
 + (Coordinate*) createWithX:(NSUInteger)x andY:(NSUInteger)y {
     Coordinate *coordinate = [[Coordinate alloc] init];
     
-    coordinate -> _x = x;
-    coordinate -> _y = y;
+    coordinate.x = x;
+    coordinate.y = y;
     
     return coordinate;
 }

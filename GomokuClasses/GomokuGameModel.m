@@ -11,15 +11,18 @@
 
 @interface GomokuGameModel () <GomokuGameModelProtocol>
 
+@property (strong, readwrite) Puzzle  * _Nonnull puzzle;
+
 @end
 
 @implementation GomokuGameModel
+@synthesize puzzle, delegate;
 
 - (instancetype) init {
     self = [super init];
     
     if (self) {
-        self -> _puzzle = nil;
+        self.puzzle = nil;
         self.delegate = nil;
     }
     
@@ -39,11 +42,11 @@
 
 
 - (void) newGameWithSizeWidth:(NSInteger)width andHeight:(NSInteger)height {
-    self -> _puzzle = [Puzzle createPuzzleWithRow:width andColumn:height];
+    self.puzzle = [Puzzle createPuzzleWithRow:width andColumn:height];
 }
 
 - (void) turn: (Player*) player withCoordinate: (Coordinate*) coordinate {
-    if (!_delegate) return;
+    if (!delegate) return;
     [self.puzzle markCellWithCoordinate:coordinate andPlayer:player];
 
     NSArray *array;

@@ -8,13 +8,21 @@
 
 #import "Dimension.h"
 
+@interface Dimension ()
+
+@property (nonatomic, assign, readwrite) NSInteger width;
+@property (nonatomic, assign, readwrite) NSInteger height;
+
+@end
+
 @implementation Dimension
+@synthesize width,height;
 
 + (Dimension*) createWithWidth:(NSInteger)width andHeight:(NSInteger)height {
     Dimension *dimension = [[Dimension alloc] init];
     
-    dimension -> _width = width;
-    dimension -> _height = height;
+    dimension.width = width;
+    dimension.height = height;
     
     return dimension;
 }

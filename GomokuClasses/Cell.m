@@ -8,20 +8,29 @@
 
 #import "Cell.h"
 
+@interface Cell ()
+
+@property (nonatomic, strong, readwrite) Coordinate *coordinate;
+@property (nonatomic, strong, readwrite) Player *owner;
+@property (nonatomic, assign, readwrite) BOOL marked;
+
+@end
+
 @implementation Cell
+@synthesize coordinate,owner,marked;
 
 + (Cell*) createWithCoordinate:(Coordinate *)coordinate {
     Cell *cell = [[Cell alloc] init];
     
-    cell -> _marked = NO;
-    cell -> _coordinate = coordinate;
+    cell.marked = NO;
+    cell.coordinate = coordinate;
     
     return cell;
 }
 
 - (void) markWithPlayer:(Player *)player {
-    self -> _marked = YES;
-    self -> _owner = player;
+    self.marked = YES;
+    self.owner = player;
 }
 
 @end

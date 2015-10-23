@@ -9,7 +9,15 @@
 #import "ConcreteCoordinate.h"
 #import "Dimension.h"
 
+@interface ConcreteCoordinate ()
+
+@property (nonatomic, assign, readwrite) NSUInteger x;
+@property (nonatomic, assign, readwrite) NSUInteger y;
+
+@end
+
 @implementation ConcreteCoordinate
+@dynamic x,y;
 
 + (ConcreteCoordinate*) createWithRow:(NSUInteger)row andColumn:(NSUInteger)column
                     andDimensionWidth:(NSUInteger) dimensionWidth andDimensionHeight:(NSUInteger) dimensionHeight {
@@ -17,9 +25,9 @@
     ConcreteCoordinate *coordinate = [[ConcreteCoordinate alloc] init];
     Dimension *dimension = [Dimension createWithWidth:dimensionWidth andHeight:dimensionHeight];
     
-    coordinate -> _x = row;
-    coordinate -> _y = column;
-    coordinate -> _dimension = dimension;
+    coordinate.x = row;
+    coordinate.y = column;
+    coordinate.dimension = dimension;
     
     return coordinate;
 }
@@ -49,8 +57,8 @@
     
     NSUInteger min = MIN(coordinate.x, coordinate.y) - 1;
     
-    coordinate -> _x -= min;
-    coordinate -> _y -=min;
+    coordinate.x -= min;
+    coordinate.y -=min;
     
     return coordinate;
 }
@@ -71,8 +79,8 @@
         
     }
     
-    coordinate -> _x += min;
-    coordinate -> _y -= min;
+    coordinate.x += min;
+    coordinate.y -= min;
     
     return coordinate;
 }
@@ -93,8 +101,8 @@
         min = coordinate.dimension.height - coordinate.y;
     }
     
-    coordinate -> _x -= min;
-    coordinate -> _y += min;
+    coordinate.x -= min;
+    coordinate.y += min;
     
     return coordinate;
 }
@@ -115,8 +123,8 @@
         min = MIN(coordinate.dimension.width, coordinate.dimension.height) - coordinate.x;
     }
     
-    coordinate -> _x += min;
-    coordinate -> _y +=min;
+    coordinate.x += min;
+    coordinate.y +=min;
     
     return coordinate;
 }
