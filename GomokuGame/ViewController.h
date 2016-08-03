@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class AZArray;
 @interface ViewController : UIViewController
 
+@property (nonatomic, strong) AZArray *array;
 
 @end
 

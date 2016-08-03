@@ -16,7 +16,7 @@
 		BC46927B1BD801A000D78D2D /* Puzzle.m in Sources */ = {isa = PBXBuildFile; fileRef = BC4692741BD801A000D78D2D /* Puzzle.m */; };
 		BCBF30AD1BD2717A00C566E3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BCBF30AC1BD2717A00C566E3 /* main.m */; };
 		BCBF30B01BD2717A00C566E3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BCBF30AF1BD2717A00C566E3 /* AppDelegate.m */; };
-		BCBF30B31BD2717A00C566E3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCBF30B21BD2717A00C566E3 /* ViewController.m */; };
+		BCBF30B31BD2717A00C566E3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCBF30B21BD2717A00C566E3 /* ViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		BCBF30B61BD2717A00C566E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCBF30B41BD2717A00C566E3 /* Main.storyboard */; };
 		BCBF30B81BD2717A00C566E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCBF30B71BD2717A00C566E3 /* Assets.xcassets */; };
 		BCBF30BB1BD2717A00C566E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCBF30B91BD2717A00C566E3 /* LaunchScreen.storyboard */; };

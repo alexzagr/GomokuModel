@@ -150,13 +150,19 @@
                 
                 tempCounter = 0;
             }
+            
+            if (tempCounter >= 5 && ([array count] - 1 == idx)) {
+                for (NSInteger forCounter = idx - tempCounter + 1; forCounter < idx; forCounter++) {
+                    [winCombination addObject:[array objectAtIndex:forCounter]];
+                }
+            }
         }];
         
         [array removeAllObjects];
         tempCounter = 0;
     }
     
-    return ([winCombination count] > 0) ? winCombination : nil;
+    return ([winCombination count] >= 5) ? winCombination : nil;
 }
 
 @end

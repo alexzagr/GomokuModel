@@ -58,7 +58,7 @@
     NSUInteger min = MIN(coordinate.x, coordinate.y) - 1;
     
     coordinate.x -= min;
-    coordinate.y -=min;
+    coordinate.y -= min;
     
     return coordinate;
 }
@@ -124,7 +124,7 @@
     }
     
     coordinate.x += min;
-    coordinate.y +=min;
+    coordinate.y += min;
     
     return coordinate;
 }
