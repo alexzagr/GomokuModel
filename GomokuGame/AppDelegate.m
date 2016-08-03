@@ -17,50 +17,6 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-//    for (NSInteger i = 1; i < 9; i++) {
-//        NSLog(@"%i", i);
-//    }
-    //FooA:NSObject
-    //    - (void) print {
-    //        NSLog(@"A");
-    //    }
-    //
-    //    + (void) print {
-    //        NSLog(@"A+");
-    //    }
-    //
-    //FooB:FooA
-    //
-    //    - (void) print {
-    //        NSLog(@"B");
-    //    }
-    //
-    //
-    //    FooB objB = [[FooB alloc] init];
-    //    FooA objA = (FooB*) objB;
-    //
-    //    [objA print];
-    //    [FooB print];
-    // __weak
-    //    dispatch_queue_t queue = dispatch_queue_create("com.developer.queue", DISPATCH_QUEUE_SERIAL);
-    //    dispatch_async(queue, ^{
-    //        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"title" message:@"message" delegate:nil cancelButtonTitle:@"Cancel" otherButtonTitles:nil, nil];
-    //        [alert show];
-    //    });
-    
-    //    __weak typeof(self) weakSelf = self;
-    //    self.block = ^() {
-    //        __strong typeof(self) strongSelf = weakSelf;
-    //        BOOL a = YES;
-    //        BOOL b = YES;
-    //        
-    //        NSAssert(a == b, @"assert");
-    //    };
-    
-//    dispatch_sync(dispatch_get_main_queue(), ^{
-//        NSLog(@"Hello world");
-//    });
-    
     
     return YES;
 }

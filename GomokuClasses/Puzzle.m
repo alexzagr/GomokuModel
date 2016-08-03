@@ -47,9 +47,15 @@
     Dimension *dimension = [Dimension createWithWidth:rowCount andHeight:columnCount]; // Устанавлием границы объекта Puzzle
     
     NSMutableArray *tempArray = [NSMutableArray arrayWithCapacity:columnCount + 1];
+    for (NSInteger i = 0; i < columnCount + 1; i++) {
+        [tempArray addObject:[NSNull null]];
+    }
     
     for (NSInteger countY = 1; countY < columnCount + 1; countY++) {
         NSMutableArray *innerArray = [NSMutableArray arrayWithCapacity:rowCount+1];
+        for (NSInteger i = 0; i < rowCount + 1; i++) {
+            [innerArray addObject:[NSNull null]];
+        }
         
         for (NSInteger countX = 1; countX < rowCount + 1; countX++) {
             
@@ -102,7 +108,7 @@
         [verticalLine addObject:[self giveCellWith:[Coordinate createWithX:coordinate.x andY:verticalCounter]]];
     }
     
-    ConcreteCoordinate *CCoordinate = [self convertToCCordinate:coordinate withDimension:_dimension];
+    ConcreteCoordinate *CCoordinate = [self convertToCCordinate:coordinate withDimension:self.dimension];
     
     ConcreteCoordinate *topLeft = [CCoordinate topLeftCoordinate];
     ConcreteCoordinate *downRight = [CCoordinate downRightCoordinate];
@@ -137,7 +143,7 @@
         [array enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
             Cell *cell = obj;
             
-            if (cell.marked && [cell.owner isEqual:player]) {
+            if (cell.marked && [cell.owner.playerName isEqualToString:player.playerName]) {
                 tempCounter++;
                 
             } else {
