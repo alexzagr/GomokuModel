@@ -43,29 +43,23 @@
 }
 
 + (Puzzle*) createPuzzleWithRow:(NSUInteger)rowCount andColumn:(NSUInteger)columnCount {
-    Puzzle *puzzle = [[Puzzle alloc] init];     // Создаем абстрактный объект (Puzzle) содержащий в себе ячейки (Cell)
-    Dimension *dimension = [Dimension createWithWidth:rowCount andHeight:columnCount]; // Устанавлием границы объекта Puzzle
     
-    NSMutableArray *tempArray = [NSMutableArray arrayWithCapacity:columnCount + 1];
-    for (NSInteger i = 0; i < columnCount + 1; i++) {
-        [tempArray addObject:[NSNull null]];
-    }
+    Puzzle *puzzle = [[Puzzle alloc] init];
+    Dimension *dimension = [Dimension createWithWidth:rowCount andHeight:columnCount]; // Задаем размерность Puzzle
     
-    for (NSInteger countY = 1; countY < columnCount + 1; countY++) {
-        NSMutableArray *innerArray = [NSMutableArray arrayWithCapacity:rowCount+1];
-        for (NSInteger i = 0; i < rowCount + 1; i++) {
-            [innerArray addObject:[NSNull null]];
-        }
+    NSMutableArray *tempArray = [NSMutableArray arrayWithCapacity:columnCount];
+    for (NSInteger countY = 0; countY < columnCount; countY++) {
+        NSMutableArray *innerArray = [NSMutableArray arrayWithCapacity:rowCount];
         
-        for (NSInteger countX = 1; countX < rowCount + 1; countX++) {
+        for (NSInteger countX = 0; countX < rowCount; countX++) {
             
-            Coordinate *coordinate = [Coordinate createWithX:countX andY:countY];
-            Cell *cell = [Cell createWithCoordinate:coordinate]; // Создаем объекты Cell и даем им свойство Coordinate, однозначно определяющее их относительно объекта Puzzle
+            Coordinate *coordinate = [Coordinate createWithX:countX + 1 andY:countY + 1];
+            Cell *cell = [Cell createWithCoordinate:coordinate]; // Создаем объекты Cell и даем им свойство Coordinate
             
-            [innerArray insertObject:cell atIndex:countX];
+            [innerArray addObject:cell];
             
         }
-        [tempArray insertObject:innerArray atIndex:countY];
+        [tempArray addObject:innerArray];
         
     }
     
@@ -85,10 +79,14 @@
 
 - (Cell*) giveCellWith:(Coordinate *)coordinate {
     
-    return [[self.cells objectAtIndex:coordinate.y] objectAtIndex:coordinate.x];
+    return [[self.cells objectAtIndex:coordinate.y - 1] objectAtIndex:coordinate.x - 1];
 }
 
 - (void) markCellWithCoordinate:(Coordinate *)coordinate andPlayer:(Player *)player {
+    NSAssert((coordinate.x <= self.dimension.width) &&
+             (coordinate.y <= self.dimension.height) &&
+             ((coordinate.x > 0) && (coordinate.y > 0)), @"invalid coordinate");
+    
     Cell *cell = [self giveCellWith:coordinate];
     
     [cell markWithPlayer:player];
@@ -116,7 +114,7 @@
     NSUInteger minus = [ConcreteCoordinate minus:topLeft CCoordinate:downRight];
     
     if (minus > 0) {
-        for (NSInteger LDCount = 1; LDCount < minus + 1; LDCount++) {
+        for (NSInteger LDCount = 0; LDCount < minus + 1; LDCount++) {
             
             [leftDiagonalLine addObject:[self giveCellWith:[Coordinate createWithX:topLeft.x + LDCount
                                                                               andY:topLeft.y + LDCount]]];
@@ -129,7 +127,7 @@
     minus = [ConcreteCoordinate minus:downLeft CCoordinate:topRight];
     
     if (minus > 0) {
-        for (NSUInteger RDCount = 1; RDCount < minus + 1; RDCount++) {
+        for (NSUInteger RDCount = 0; RDCount < minus + 1; RDCount++) {
             [rightDiagonalLine addObject:[self giveCellWith:[Coordinate createWithX:topRight.x - RDCount
                                                                                andY:topRight.y + RDCount]]];
         }
@@ -143,7 +141,7 @@
         [array enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
             Cell *cell = obj;
             
-            if (cell.marked && [cell.owner.playerName isEqualToString:player.playerName]) {
+            if (cell.marked && [cell.owner isEqual:player]) {
                 tempCounter++;
                 
             } else {
@@ -158,7 +156,7 @@
             }
             
             if (tempCounter >= 5 && ([array count] - 1 == idx)) {
-                for (NSInteger forCounter = idx - tempCounter + 1; forCounter < idx; forCounter++) {
+                for (NSInteger forCounter = idx - (tempCounter - 1); forCounter < idx + 1; forCounter++) {
                     [winCombination addObject:[array objectAtIndex:forCounter]];
                 }
             }

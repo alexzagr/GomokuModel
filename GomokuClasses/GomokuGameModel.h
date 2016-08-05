@@ -13,19 +13,19 @@
 @class Puzzle, Cell;
 @protocol GomokuGameModelProtocol <NSObject>
 @required
-- (void) winCells: (NSArray<__kindof Cell*> * _Nonnull ) cells;
+- (void) winCells: (NSArray<__kindof Cell*> *) cells;
 
 @end
 
 @interface GomokuGameModel : NSObject
 
-@property (strong, readonly) Puzzle  * _Nullable puzzle;
-@property (nonatomic, assign) id <GomokuGameModelProtocol> _Nullable delegate;
+@property (strong, readonly) Puzzle  *puzzle;
+@property (nonatomic, assign) id <GomokuGameModelProtocol> delegate;
 
 
-+ (GomokuGameModel* _Nonnull) shared;
++ (GomokuGameModel*) shared;
 
 - (void) newGameWithSizeWidth: (NSInteger) width andHeight: (NSInteger) height;
-- (void) turn: (Player* _Nonnull) player withCoordinate: (Coordinate* _Nonnull) coordinate;
+- (void) turn: (Player*) player withCoordinate: (Coordinate*) coordinate;
 
 @end

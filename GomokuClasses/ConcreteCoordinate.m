@@ -113,14 +113,14 @@
                                                     andDimensionHeight:self.dimension.height];
     
     NSUInteger min;
-    if (coordinate.y > coordinate.x) {
-        min = coordinate.dimension.height - coordinate.y;
-        
-    } else if (coordinate.x > coordinate.y) {
-        min = coordinate.dimension.width - coordinate.x;
-        
-    } else if (coordinate.x == coordinate.y) {
-        min = MIN(coordinate.dimension.width, coordinate.dimension.height) - coordinate.x;
+    
+    NSUInteger minDimension = MIN(coordinate.dimension.width, coordinate.dimension.height);
+    NSUInteger maxCoordinate = MAX(coordinate.x, coordinate.y);
+    
+    if (minDimension > maxCoordinate) {
+        min = minDimension - maxCoordinate;
+    } else {
+        min = 0;
     }
     
     coordinate.x += min;

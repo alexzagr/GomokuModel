@@ -9,9 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @class Cell, Coordinate, Player, Dimension;
-@interface Puzzle : NSObject {
-@private Dimension *_dimension;
-}
+@interface Puzzle : NSObject
 
 @property (strong, readonly) Dimension *dimension;
 @property (strong, readonly) NSArray *cells;

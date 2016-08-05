@@ -12,11 +12,21 @@
 
 @interface ViewController () <GomokuGameModelProtocol>
 
+@property (nonatomic, strong) Player *player;
+
+@property (nonatomic, strong) IBOutlet UILabel *labelX;
+@property (nonatomic, strong) IBOutlet UILabel *labelY;
+@property (nonatomic, strong) IBOutlet UILabel *labelBingo;
+
+@property (nonatomic, strong) IBOutlet UIButton *tapper;
+
 @end
 
 @implementation ViewController
 
 - (void) winCells: (NSArray<__kindof Cell*> * _Nonnull ) cells {
+    self.labelBingo.hidden = NO;
+    
     for (Cell *winCell in cells) {
         NSLog(@"CX = %@, CY = %@", @(winCell.coordinate.x).stringValue, @(winCell.coordinate.y).stringValue);
     }
@@ -26,20 +36,23 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [[GomokuGameModel shared] setDelegate:self];
-    [[GomokuGameModel shared] newGameWithSizeWidth:5 andHeight:10];
+    [self.tapper addTarget:self action:@selector(turn) forControlEvents:UIControlEventTouchUpInside];
     
-    [self.view addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(turn)]];
+    self.player = [Player createWithPlayerName:@"Alex"];
+    [[GomokuGameModel shared] setDelegate:self];
+    [[GomokuGameModel shared] newGameWithSizeWidth:30 andHeight:8];
 }
 
 - (void) turn {
     static NSInteger count = 1;
     
-    Player *player = [Player createWithPlayerName:@"Alex"];
     for (NSInteger cc = count; cc < count+1; cc++) {
-        Coordinate *coordinate = [Coordinate createWithX:5 andY:cc];
+        Coordinate *coordinate = [Coordinate createWithX:18+(cc - 1) andY:8-(cc - 1)];
         
-        [[GomokuGameModel shared] turn:player withCoordinate:coordinate];
+        self.labelX.text = [NSString stringWithFormat:@"X: %@", @(coordinate.x).stringValue];
+        self.labelY.text = [NSString stringWithFormat:@"Y: %@", @(coordinate.y).stringValue];
+        
+        [[GomokuGameModel shared] turn:self.player withCoordinate:coordinate];
     }
     
     count++;

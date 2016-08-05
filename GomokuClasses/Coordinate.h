@@ -8,9 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Coordinate : NSObject {
-@protected NSUInteger _x, _y;
-}
+@interface Coordinate : NSObject
 
 @property (nonatomic, assign, readonly) NSUInteger x;
 @property (nonatomic, assign, readonly) NSUInteger y;

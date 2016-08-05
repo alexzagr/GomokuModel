@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9046" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10115" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9035"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10084"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -14,10 +14,120 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rqr-Br-cMM">
+                                <rect key="frame" x="60" y="205" width="200" height="159"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Введенная координата:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8uX-25-AgY">
+                                        <rect key="frame" x="0.0" y="0.0" width="190" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Y:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DXs-ke-wvY">
+                                        <rect key="frame" x="0.0" y="66" width="15" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="X: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LP6-LD-r0P">
+                                        <rect key="frame" x="0.0" y="37" width="21" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4cm-Dh-DSn">
+                                        <rect key="frame" x="75" y="129" width="51" height="30"/>
+                                        <state key="normal" title="Нажми"/>
+                                    </button>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nTy-ls-R5u">
+                                        <rect key="frame" x="64" y="101" width="72" height="20"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Б">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.94878572225570679" green="0.24022653698921204" blue="0.18167141079902649" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <font key="NSFont" size="17" name="HelveticaNeue"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content="И">
+                                                <attributes>
+                                                    <color key="NSColor" red="1" green="0.97032958269119263" blue="0.12762472033500671" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <font key="NSFont" size="17" name="HelveticaNeue"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content="Н">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.36928790807723999" green="0.97907716035842896" blue="0.9876137375831604" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <font key="NSFont" size="17" name="HelveticaNeue"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content="Г">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.10296543687582016" green="0.28698968887329102" blue="0.99349814653396606" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <font key="NSFont" size="17" name="HelveticaNeue"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content="О">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.91015297174453735" green="0.36243873834609985" blue="0.99676388502120972" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <font key="NSFont" size="17" name="HelveticaNeue"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content="!">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.94780880212783813" green="0.25344949960708618" blue="0.36014103889465332" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <font key="NSFont" size="17" name="HelveticaNeue"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content="!!">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.94773226976394653" green="0.25445163249969482" blue="0.37000375986099243" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <font key="NSFont" size="17" name="HelveticaNeue"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="DXs-ke-wvY" firstAttribute="leading" secondItem="Rqr-Br-cMM" secondAttribute="leading" id="2Ed-UP-zXH"/>
+                                    <constraint firstItem="8uX-25-AgY" firstAttribute="top" secondItem="Rqr-Br-cMM" secondAttribute="top" id="ASh-Go-jKg"/>
+                                    <constraint firstItem="8uX-25-AgY" firstAttribute="leading" secondItem="Rqr-Br-cMM" secondAttribute="leading" id="Amk-pr-C1h"/>
+                                    <constraint firstItem="DXs-ke-wvY" firstAttribute="top" secondItem="LP6-LD-r0P" secondAttribute="bottom" constant="8" id="IYU-kF-fKB"/>
+                                    <constraint firstItem="nTy-ls-R5u" firstAttribute="top" secondItem="8uX-25-AgY" secondAttribute="bottom" constant="80" id="LiA-ZS-jq5"/>
+                                    <constraint firstItem="LP6-LD-r0P" firstAttribute="leading" secondItem="Rqr-Br-cMM" secondAttribute="leading" id="VpG-0D-zIB"/>
+                                    <constraint firstItem="4cm-Dh-DSn" firstAttribute="top" secondItem="nTy-ls-R5u" secondAttribute="bottom" constant="8" id="XhA-hm-Wxo"/>
+                                    <constraint firstItem="LP6-LD-r0P" firstAttribute="top" secondItem="8uX-25-AgY" secondAttribute="bottom" constant="16" id="Yc3-Tj-uTQ"/>
+                                    <constraint firstItem="4cm-Dh-DSn" firstAttribute="centerX" secondItem="Rqr-Br-cMM" secondAttribute="centerX" id="j5u-sN-5Bq"/>
+                                    <constraint firstAttribute="bottom" secondItem="4cm-Dh-DSn" secondAttribute="bottom" id="nc3-eY-oNy"/>
+                                    <constraint firstItem="nTy-ls-R5u" firstAttribute="centerX" secondItem="Rqr-Br-cMM" secondAttribute="centerX" id="qbZ-tq-bB3"/>
+                                    <constraint firstAttribute="width" constant="200" id="vBU-QI-Ng2"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Rqr-Br-cMM" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Ygm-Is-Fap"/>
+                            <constraint firstItem="Rqr-Br-cMM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pxU-4M-MBt"/>
+                        </constraints>
                     </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="568"/>
+                    <connections>
+                        <outlet property="labelBingo" destination="nTy-ls-R5u" id="eUu-Ej-OID"/>
+                        <outlet property="labelX" destination="LP6-LD-r0P" id="JXF-gB-qLF"/>
+                        <outlet property="labelY" destination="DXs-ke-wvY" id="7v1-HP-1Hc"/>
+                        <outlet property="tapper" destination="4cm-Dh-DSn" id="qAS-LD-QP1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

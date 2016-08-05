@@ -11,7 +11,7 @@
 
 @interface GomokuGameModel () <GomokuGameModelProtocol>
 
-@property (strong, readwrite) Puzzle  * _Nonnull puzzle;
+@property (strong, readwrite) Puzzle  * puzzle;
 
 @end
 
