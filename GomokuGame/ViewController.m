@@ -40,14 +40,14 @@
     
     self.player = [Player createWithPlayerName:@"Alex"];
     [[GomokuGameModel shared] setDelegate:self];
-    [[GomokuGameModel shared] newGameWithSizeWidth:30 andHeight:8];
+    [[GomokuGameModel shared] newGameWithSizeWidth:50 andHeight:50];
 }
 
 - (void) turn {
-    static NSInteger count = 1;
+    static NSInteger count = 23;
     
     for (NSInteger cc = count; cc < count+1; cc++) {
-        Coordinate *coordinate = [Coordinate createWithX:18+(cc - 1) andY:8-(cc - 1)];
+        Coordinate *coordinate = [Coordinate createWithX:cc andY:cc];
         
         self.labelX.text = [NSString stringWithFormat:@"X: %@", @(coordinate.x).stringValue];
         self.labelY.text = [NSString stringWithFormat:@"Y: %@", @(coordinate.y).stringValue];
