@@ -30,6 +30,8 @@
     for (Cell *winCell in cells) {
         NSLog(@"CX = %@, CY = %@", @(winCell.coordinate.x).stringValue, @(winCell.coordinate.y).stringValue);
     }
+    
+    [[GomokuGameModel shared] newGameWithSizeWidth:50 andHeight:50];
 }
 
 

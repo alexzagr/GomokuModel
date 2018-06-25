@@ -11,12 +11,11 @@
 
 @interface GomokuGameModel () <GomokuGameModelProtocol>
 
-@property (strong, readwrite) Puzzle  * puzzle;
+@property (strong, readwrite) Puzzle  *puzzle;
 
 @end
 
 @implementation GomokuGameModel
-@synthesize puzzle, delegate;
 
 - (instancetype) init {
     self = [super init];
@@ -46,12 +45,12 @@
 }
 
 - (void) turn: (Player*) player withCoordinate: (Coordinate*) coordinate {
-    if (!delegate) return;                                                  // если обратная связь не установлена, то выходим
+    if (!self.delegate) return;                                                  // если обратная связь не установлена, то выходим
     [self.puzzle markCellWithCoordinate:coordinate andPlayer:player];       // помечаем ячейку (Cell) игроком (Player)
 
     NSArray *array;
     if ((array = [self.puzzle isBingo:coordinate andPlayer:player]) != nil) { // если есть выигрышная комбинация ячеек
-        [self winCells:array];                                                // то оповещаем программиста
+        [self winCells:array];                                                // то оповещаем разработчика //
     }
     
 }

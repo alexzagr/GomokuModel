@@ -20,23 +20,22 @@
 @property (nonatomic, strong) NSMutableArray *leftDiagonalLine;
 @property (nonatomic, strong) NSMutableArray *rightDiagonalLine;
 
-@property (strong, readwrite) Dimension *dimension;
-@property (strong, readwrite) NSArray *cells;
+@property (nonatomic, strong) Dimension *dimension;
+@property (nonatomic, strong) NSArray *cells;
 
 @end
 
 @implementation Puzzle
-@synthesize winCombination, horizontalLine, verticalLine, leftDiagonalLine, rightDiagonalLine, dimension, cells;
 
 - (id) init {
     self = [super init];
     
     if (self) {
-        winCombination = [[NSMutableArray alloc] init];
-        horizontalLine = [[NSMutableArray alloc] init];
-        verticalLine = [[NSMutableArray alloc] init];
-        leftDiagonalLine = [[NSMutableArray alloc] init];
-        rightDiagonalLine = [[NSMutableArray alloc] init];
+        _winCombination = [[NSMutableArray alloc] init];
+        _horizontalLine = [[NSMutableArray alloc] init];
+        _verticalLine = [[NSMutableArray alloc] init];
+        _leftDiagonalLine = [[NSMutableArray alloc] init];
+        _rightDiagonalLine = [[NSMutableArray alloc] init];
     }
     
     return self;
@@ -72,9 +71,9 @@
 - (ConcreteCoordinate*) convertToCCordinate: (Coordinate*) coordinate withDimension: (Dimension*) p_dimension {
     NSAssert((coordinate.x <= p_dimension.width) &&
              (coordinate.y <= p_dimension.height) &&
-             ((coordinate.x > 0) && (coordinate.y > 0)), @"invalid coordinate");
+             ((coordinate.x > 0) && (coordinate.y > 0)), @"Invalid coordinate");
     
-    return [ConcreteCoordinate createWithCoordinate:coordinate andDimension:dimension];
+    return [ConcreteCoordinate createWithCoordinate:coordinate andDimension:self.dimension];
 }
 
 - (Cell*) giveCellWith:(Coordinate *)coordinate {
@@ -85,7 +84,7 @@
 - (void) markCellWithCoordinate:(Coordinate *)coordinate andPlayer:(Player *)player {
     NSAssert((coordinate.x <= self.dimension.width) &&
              (coordinate.y <= self.dimension.height) &&
-             ((coordinate.x > 0) && (coordinate.y > 0)), @"invalid coordinate");
+             ((coordinate.x > 0) && (coordinate.y > 0)), @"Invalid coordinate");
     
     Cell *cell = [self giveCellWith:coordinate];
     
@@ -96,14 +95,14 @@
     
     // Здесь реализация алгоритма по нахождению выигрышной комбинации ячеек (Cell)
     
-    NSArray *arrays = @[horizontalLine, verticalLine, leftDiagonalLine, rightDiagonalLine];
+    NSArray *arrays = @[self.horizontalLine, self.verticalLine, self.leftDiagonalLine, self.rightDiagonalLine];
     
     for (NSUInteger horizontalCounter = 1; horizontalCounter < self.dimension.width + 1; horizontalCounter++) {
-        [horizontalLine addObject:[self giveCellWith:[Coordinate createWithX:horizontalCounter andY:coordinate.y]]];
+        [self.horizontalLine addObject:[self giveCellWith:[Coordinate createWithX:horizontalCounter andY:coordinate.y]]];
     }
     
     for (NSUInteger verticalCounter = 1; verticalCounter < self.dimension.height + 1; verticalCounter++) {
-        [verticalLine addObject:[self giveCellWith:[Coordinate createWithX:coordinate.x andY:verticalCounter]]];
+        [self.verticalLine addObject:[self giveCellWith:[Coordinate createWithX:coordinate.x andY:verticalCounter]]];
     }
     
     ConcreteCoordinate *CCoordinate = [self convertToCCordinate:coordinate withDimension:self.dimension];
@@ -112,11 +111,10 @@
     ConcreteCoordinate *downRight = [CCoordinate downRightCoordinate];
     
     NSUInteger minus = [ConcreteCoordinate minus:topLeft CCoordinate:downRight];
-    
     if (minus > 0) {
         for (NSInteger LDCount = 0; LDCount < minus + 1; LDCount++) {
             
-            [leftDiagonalLine addObject:[self giveCellWith:[Coordinate createWithX:topLeft.x + LDCount
+            [self.leftDiagonalLine addObject:[self giveCellWith:[Coordinate createWithX:topLeft.x + LDCount
                                                                               andY:topLeft.y + LDCount]]];
         }
     }
@@ -128,7 +126,7 @@
     
     if (minus > 0) {
         for (NSUInteger RDCount = 0; RDCount < minus + 1; RDCount++) {
-            [rightDiagonalLine addObject:[self giveCellWith:[Coordinate createWithX:topRight.x - RDCount
+            [self.rightDiagonalLine addObject:[self giveCellWith:[Coordinate createWithX:topRight.x - RDCount
                                                                                andY:topRight.y + RDCount]]];
         }
     }
@@ -148,7 +146,7 @@
                 
                 if (tempCounter >= 5) {
                     for (NSInteger forCounter = idx - tempCounter; forCounter < idx; forCounter++) {
-                        [winCombination addObject:[array objectAtIndex:forCounter]];
+                        [self.winCombination addObject:[array objectAtIndex:forCounter]];
                     }
                 }
                 
@@ -157,7 +155,7 @@
             
             if (tempCounter >= 5 && ([array count] - 1 == idx)) {
                 for (NSInteger forCounter = idx - (tempCounter - 1); forCounter < idx + 1; forCounter++) {
-                    [winCombination addObject:[array objectAtIndex:forCounter]];
+                    [self.winCombination addObject:[array objectAtIndex:forCounter]];
                 }
             }
         }];
@@ -166,7 +164,7 @@
         tempCounter = 0;
     }
     
-    return ([winCombination count] >= 5) ? winCombination : nil;
+    return ([self.winCombination count] >= 5) ? self.winCombination : nil;
 }
 
 @end

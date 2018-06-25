@@ -14,6 +14,8 @@
 @property (nonatomic, assign, readwrite) NSUInteger x;
 @property (nonatomic, assign, readwrite) NSUInteger y;
 
+@property (nonatomic, strong) Dimension *dimension;
+
 @end
 
 @implementation ConcreteCoordinate
@@ -69,7 +71,7 @@
                                                     andDimensionHeight:self.dimension.height];
     
     NSUInteger summ = coordinate.x + coordinate.y;
-    NSUInteger min;
+    NSUInteger min = 0;
     
     if (summ <= coordinate.dimension.width) {
         min = coordinate.y - 1;
@@ -92,13 +94,14 @@
                                                     andDimensionHeight:self.dimension.height];
     
     NSUInteger summ = coordinate.x + coordinate.y;
-    NSUInteger min;
+    NSUInteger min = 0;
     
     if (summ <= coordinate.dimension.height) {
         min = coordinate.x - 1;
         
     } else if (summ > coordinate.dimension.height) {
         min = coordinate.dimension.height - coordinate.y;
+        
     }
     
     coordinate.x -= min;
@@ -119,8 +122,10 @@
     
     if (minDimension > maxCoordinate) {
         min = minDimension - maxCoordinate;
+        
     } else {
         min = 0;
+        
     }
     
     coordinate.x += min;

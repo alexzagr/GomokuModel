@@ -11,8 +11,6 @@
 @class Dimension;
 @interface ConcreteCoordinate : Coordinate
 
-@property (nonatomic, strong) Dimension *dimension;
-
 + (ConcreteCoordinate*) createWithRow:(NSUInteger)row andColumn:(NSUInteger)column
                     andDimensionWidth:(NSUInteger) dimensionWidth andDimensionHeight:(NSUInteger) dimensionHeight;
 
